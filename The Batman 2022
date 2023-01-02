@@ -1,0 +1,26 @@
+.Model Small
+.Code
+Org 100h
+
+TData:
+JMP Prosses 
+Judul Film DB               "Judul Film  : The Batman$"
+Tahun Rilis DB   0DH,0AH, "Tahun Rilis   : 2022"
+Sutradara DB   0DH,0AH, "Sutradara  : Matt Reeves$"
+Durasi DB         0DH,0AH, "Durasi  : 2 Jam 56 Menit$"
+Pemeran Utama DB    0DH,0AH, "Pemeran Utama      : Robert Pattinson$"
+Genre DB   0DH,0AH, "Genre  : Action$"
+
+Prosses:
+MOV AH,9H
+LEA DX,Judul Film 
+INT 21H
+LEA DX,Tahun Rilis
+INT 21H
+LEA DX,Sutradara
+INT 21H
+LEA DX,Durasi
+INT 21H
+LEA DX,Pemeran Utama
+INT 21H
+LEA DX,Genre
